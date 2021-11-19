@@ -1,0 +1,115 @@
+﻿@model IEnumerable<TP6_2Parcial.Models.LIBRO>
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Listado Libros</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+</head>
+<body>
+    <div class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                @Html.ActionLink("TP6-2° Parcial", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+            </div>
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                    <li>@Html.ActionLink("Inicio", "Index", "Home")</li>
+                    <li>@Html.ActionLink("Libro", "Index", "LIBRO")</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <p>
+        @Html.ActionLink("Nuevo Libro", "Agregar")
+    </p>
+    <table class="table">
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.IDLIBRO)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TITULO)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.AUTOR)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ISBN)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PAGINAS)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.EDICION)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.EDITORIAL)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CIUDAD)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PAIS)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.FECHAEDICION)
+            </th>
+            <th></th>
+        </tr>
+    
+    @foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.IDLIBRO)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TITULO)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.AUTOR)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ISBN)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PAGINAS)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.EDICION)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.EDITORIAL)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CIUDAD)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PAIS)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.FECHAEDICION)
+            </td>
+            <td>
+                @Html.ActionLink("Editar", "Editar", new { id = item.IDLIBRO }) |
+                @Html.ActionLink("Detalles", "Detalles", new { id = item.IDLIBRO }) |
+                @Html.ActionLink("Eliminar", "Eliminar", new { id = item.IDLIBRO })
+            </td>
+        </tr>
+    }
+    
+    </table>
+</body>
+</html>

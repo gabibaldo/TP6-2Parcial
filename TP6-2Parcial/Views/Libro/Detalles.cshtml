@@ -1,0 +1,119 @@
+﻿@model TP6_2Parcial.Models.LIBRO
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Detalles</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+</head>
+<body>
+    <div class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                @Html.ActionLink("TP6-2° Parcial", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+            </div>
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                    <li>@Html.ActionLink("Inicio", "Index", "Home")</li>
+                    <li>@Html.ActionLink("Libro", "Index", "LIBRO")</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div>
+        <h4>LIBRO</h4>
+        <hr />
+        <dl class="dl-horizontal">
+            <dt>
+                @Html.DisplayNameFor(model => model.TITULO)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.TITULO)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.AUTOR)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.AUTOR)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.ISBN)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.ISBN)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.PAGINAS)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.PAGINAS)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.EDICION)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.EDICION)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.EDITORIAL)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.EDITORIAL)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.CIUDAD)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.CIUDAD)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.PAIS)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.PAIS)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.FECHAEDICION)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.FECHAEDICION)
+            </dd>
+
+        </dl>
+    </div>
+    <p>
+        @Html.ActionLink("Editar", "Editar", new { id = Model.IDLIBRO }) |
+        @Html.ActionLink("Regresar", "Index")
+    </p>
+</body>
+</html>

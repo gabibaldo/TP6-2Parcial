@@ -1,0 +1,19 @@
+﻿.contenedor-imagenes {
+    display: flex;
+}
+
+.galeria {
+    margin: 5px;
+    border: 1px solid darkgrey;
+    float: left;
+    width: 100%;
+}
+
+.galeria:hover {
+    border: 1px solid black;
+}
+
+.galeria img {
+    width: 100%;
+    height: 85%;
+}
