@@ -12,7 +12,6 @@ namespace TP6_2Parcial.Controllers
         // GET: Libro
         public ActionResult Index()
         {
-            
             try
             {
                 using (var db = new ProgramaciónVisualEntities())
@@ -25,6 +24,7 @@ namespace TP6_2Parcial.Controllers
                 throw;
             }
         }
+
 
         public ActionResult Agregar()
         {
@@ -53,6 +53,7 @@ namespace TP6_2Parcial.Controllers
                 return View();
             }
         }
+
 
         public ActionResult Editar(int id)
         {
@@ -124,6 +125,5 @@ namespace TP6_2Parcial.Controllers
                 return RedirectToAction("index");
             }
         }
-
     }
 }

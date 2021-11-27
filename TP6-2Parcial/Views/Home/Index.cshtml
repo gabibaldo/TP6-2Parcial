@@ -36,6 +36,33 @@
     </div>
 </div>
 
+<body>
+    <br />
+    <h4>Esta es una función que permite copiar el texto del campo 1 al campo 2.</h4>
+
+    Campo 1: <input type="text" id="campo1" value="Escribir el texto que desee copiar"><br>
+    Campo 2: <input type="text" id="campo2"><br><br>
+
+    <button onclick="myFunction()">Copiar texto</button>
+
+    <script>
+        function myFunction() {
+            document.getElementById("campo2").value = document.getElementById("campo1").value;
+        }
+    </script>
+
+    <br />
+    <br />
+
+    <h4>Click en el botón para saber la hora.</h4>
+    <button onclick="getElementById('demo').innerHTML=Date()">Qué hora es?</button>
+    <br>
+    <br>
+    <p id="demo"></p>
+</body>
+
+<script>alert("Usted está accediendo a la página principal:");</script>
+
 <!--<div class="row">
     <div class="col-md-4">
         <h2>Getting started</h2>

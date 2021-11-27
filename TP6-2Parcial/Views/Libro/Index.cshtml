@@ -69,47 +69,48 @@
             </th>
             <th></th>
         </tr>
-    
-    @foreach (var item in Model) {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.IDLIBRO)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.TITULO)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.AUTOR)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.ISBN)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.PAGINAS)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.EDICION)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.EDITORIAL)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.CIUDAD)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.PAIS)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.FECHAEDICION)
-            </td>
-            <td>
-                @Html.ActionLink("Editar", "Editar", new { id = item.IDLIBRO }) |
-                @Html.ActionLink("Detalles", "Detalles", new { id = item.IDLIBRO }) |
-                @Html.ActionLink("Eliminar", "Eliminar", new { id = item.IDLIBRO })
-            </td>
-        </tr>
-    }
-    
+
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.IDLIBRO)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.TITULO)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.AUTOR)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.ISBN)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.PAGINAS)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.EDICION)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.EDITORIAL)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.CIUDAD)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.PAIS)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.FECHAEDICION)
+                </td>
+                <td>
+                    @Html.ActionLink("Editar", "Editar", new { id = item.IDLIBRO }) |
+                    @Html.ActionLink("Detalles", "Detalles", new { id = item.IDLIBRO }) |
+                    @Html.ActionLink("Eliminar", "Eliminar", new { id = item.IDLIBRO }, new { onclick = "return confirm('Esta seguro que desea eliminar este libro?');" })
+                </td>
+            </tr>
+        }
+
     </table>
 </body>
 </html>
